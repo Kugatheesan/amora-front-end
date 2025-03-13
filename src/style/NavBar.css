@@ -1,0 +1,270 @@
+/* .nav-Page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #4e0542fb;
+    color: white;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    box-shadow: 5px 10px #8888884a;
+    box-shadow: orchid 0 0 10px rgba(0, 0, 0, 0.38);
+    box-shadow: 5px 10px 10px #d2cece5e;
+    z-index: 1000;
+}
+
+.nav-left img {
+    width: 100px;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-include {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-include li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav-include a:hover {
+    color: yellow;
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    background: transparent;
+    background:linear-gradient(135deg, #ff41d8, #2c1e1e8f);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 6px 4px 10px #d2cece5e;
+}
+
+.auth-button a {
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
+
+.auth-button:hover {
+    background: rgb(153, 153, 140);
+    color: black;
+}
+
+@media (max-width: 900px) {
+    .nav-Page {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-center {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-include {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+
+    .auth-button {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-left img {
+        width: 50px;
+    }
+
+    .nav-include {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-include li {
+        padding: 5px 0;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .auth-button {
+        width: 100%;
+        text-align: center;
+    }
+} */
+
+
+.nav-Page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4e0542fb;
+    color: white;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.nav-left img {
+    width: 100px;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-include {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-include li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-include a:hover {
+    color: yellow;
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* Auth Buttons */
+.auth-button {
+    background: linear-gradient(135deg, #ff41d8, #2c1e1e8f);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+}
+
+.auth-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.auth-button:hover {
+    background: rgb(153, 153, 140);
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .nav-Page {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-center {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-include {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+
+    .auth-button {
+        padding: 8px 15px;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 600px) {
+    .nav-left img {
+        width: 80px;
+    }
+
+    .nav-center {
+        display: none; /* Hide default menu */
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .auth-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile-Friendly Dropdown Button */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .nav-center.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-include {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

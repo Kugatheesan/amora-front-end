@@ -1,0 +1,149 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #4e0542fb;
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+}
+
+#footer-h1 {
+    color: white;
+    font-family: Courier, monospace;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+#footer-h2 {
+    color: rgb(223, 219, 218);
+    font-family: "Garamond", Serif;
+    margin-top: 5px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.fo-link li {
+    margin: 10px 0;
+    list-style-type: none;
+}
+
+.fo-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.fo-link h2 {
+    color: white;
+    margin-top: 50px;
+    font-size: 20px;
+} 
+
+.fo-connect h2, h3 {
+    color: white;
+    margin-top: 20px;
+    text-align: start;
+    font-size: 20px;
+}
+
+.fo-connect a {
+    color: white;
+    text-decoration: none;
+}
+
+.fo-socialmedia {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.fo-socialmedia a img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #footer-h1 {
+        font-size: 20px;
+    }
+
+    #footer-h2 {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .fo-link ul {
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .fo-connect {
+        margin: 20px 0;
+    }
+
+    .fo-socialmedia {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #footer-h1 {
+        font-size: 18px;
+    }
+
+    #footer-h2 {
+        font-size: 14px;
+    }
+
+    .fo-link h2,
+    .fo-connect h2 {
+        font-size: 18px;
+    }
+
+    .fo-socialmedia a img {
+        width: 28px;
+        height: 28px;
+    }
+}

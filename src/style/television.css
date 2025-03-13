@@ -1,0 +1,148 @@
+/* General Styles */
+.istelevision {
+    background-color: rgb(29, 29, 36);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.television-Header {
+    margin-top: 100px;
+    color: white;
+    font-size: 1.5rem; 
+    /* text-shadow: 2px 2px 4px #0000ff, -2px -2px 4px rgb(255, 0, 0);  */
+    text-align: center;
+}
+
+.te-event {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px auto;
+    padding: 10px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+}
+
+.tele-award, .tele-fashion, .tele-game, .tele-music {
+    background: rgb(218, 210, 210);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    max-width: 350px;
+    width: 100%; /* Flexible card width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tele-award img, .tele-fashion img, .tele-game img, .tele-music img {
+    width: 100%;
+    border-radius: 8px;
+    height: 250px;
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.tele-award p, .tele-fashion p, .tele-game p, .tele-music p {
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 1rem; /* Adjust font size */
+    padding: 5px;
+}
+
+.tele-award h3, .tele-fashion h3, .tele-game h3, .tele-music h3 {
+    font-size: 1.8rem; /* Adjust heading size */
+    color: black;
+    margin-top: 10px;
+}
+
+/* Button styling */
+.television-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.television-button button {
+    background-color: rgb(65, 3, 65);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.television-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 1024px) {
+    .television-Header {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .te-event {
+        gap: 30px;
+    }
+
+    .tele-award, .tele-fashion, .tele-game, .tele-music {
+        max-width: 300px; /* Adjust max-width for smaller devices */
+    }
+
+    .tele-award img, .tele-fashion img, .tele-game img, .tele-music img {
+        height: 220px; /* Adjust image height */
+    }
+}
+
+/* Small Screens (Phones) */
+@media screen and (max-width: 768px) {
+    .television-Header {
+        font-size: 1.5rem; /* Adjust font size for mobile devices */
+    }
+
+    .te-event {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+        gap: 1.5rem; /* Adjust space between items */
+        padding: 10px;
+    }
+
+    .tele-award h3, .tele-fashion h3, .tele-game h3, .tele-music h3 {
+        font-size: 1.6rem; /* Adjust heading font size */
+    }
+
+    .tele-award p, .tele-fashion p, .tele-game p, .tele-music p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    .television-button button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Extra Small Screens (Very small devices) */
+@media screen and (max-width: 480px) {
+    .television-Header {
+        font-size: 1.3rem; /* Adjust font size for very small screens */
+    }
+
+    .te-event {
+        padding: 5px;
+    }
+
+    .tele-award h3, .tele-fashion h3, .tele-game h3, .tele-music h3 {
+        font-size: 1.4rem; /* Adjust heading font size */
+    }
+
+    .tele-award p, .tele-fashion p, .tele-game p, .tele-music p {
+        font-size: 0.85rem; /* Adjust paragraph font size */
+    }
+
+    .television-button button {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 6px 12px; /* Adjust padding for small screens */
+    }
+}

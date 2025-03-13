@@ -1,0 +1,150 @@
+.isfamily {
+    background-color: rgb(29, 29, 36);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.family-Header {
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+    /* text-shadow: 2px 2px 4px #0000ff, -2px -2px 4px rgb(255, 0, 0);  */
+    font-size: 1.5rem; 
+}
+
+.fa-event {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px auto;
+    padding: 10px;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.fam-wedding, .fam-anniversary, .fam-birthday, .fam-engagements {
+    background: rgb(218, 210, 210);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    max-width: 350px;
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fam-wedding img, .fam-anniversary img, .fam-birthday img, .fam-engagements img {
+    width: 100%;
+    border-radius: 8px;
+    height: 250px;
+    object-fit: cover; 
+}
+
+.fam-wedding p, .fam-anniversary p, .fam-birthday p, .fam-engagements p {
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 1rem;
+}
+
+.fam-wedding h3, .fam-anniversary h3, .fam-birthday h3, .fam-engagements h3 {
+    text-align: start;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: rgb(49, 6, 37);
+}
+
+.family-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.family-button button {
+    background-color: rgb(65, 3, 65);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.family-button button:hover {
+    background-color: darkgreen;
+}
+
+@media (max-width: 1024px) {
+    .family-Header {
+        font-size: 2rem;
+    }
+
+    .fa-event {
+        gap: 20px;
+        justify-content: space-evenly; 
+    }
+
+    .fam-wedding, .fam-anniversary, .fam-birthday, .fam-engagements {
+        max-width: 280px; 
+    }
+
+    .fam-wedding img, 
+    .fam-anniversary img, 
+    .fam-birthday img, 
+    .fam-engagements img {
+        height: 220px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .family-Header {
+        font-size: 1.5rem;
+    }
+
+    .fa-event {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 1.5rem; 
+    }
+
+    .fam-wedding, .fam-anniversary, .fam-birthday, .fam-engagements {
+        max-width: 90%; 
+    }
+
+    .fam-wedding img, 
+    .fam-anniversary img, 
+    .fam-birthday img, 
+    .fam-engagements img {
+        height: 200px; 
+    }
+
+    .family-button button {
+        font-size: 1rem;
+        padding: 8px 15px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .family-Header {
+        font-size: 1.3rem; 
+    }
+
+    .fam-wedding p, 
+    .fam-anniversary p, 
+    .fam-birthday p, 
+    .fam-engagements p {
+        font-size: 0.9rem; 
+    }
+
+    .fam-wedding h3, 
+    .fam-anniversary h3, 
+    .fam-birthday h3, 
+    .fam-engagements h3 {
+        font-size: 1.5rem; 
+    }
+
+    .family-button button {
+        font-size: 0.9rem; 
+        padding: 8px 12px; 
+    }
+}

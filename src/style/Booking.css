@@ -1,0 +1,151 @@
+/* General Page Styling */
+.booked {
+    padding: 40px;
+    height: 100vh;
+    background-image: url("../assets/decorations-made-chrysanthemums-threads-stand-along-glance-path-dark-hall_1304-3398.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blur: 8px;
+}
+
+.booking-box {
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for elegance */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 150px;
+}
+
+.booking-box h3 {
+    background: linear-gradient(to right, rgb(255, 87, 34), rgb(33, 150, 243));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 0 25px 0;
+}
+
+.booking-box input,
+.booking-box select {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.booking-box input:focus,
+.booking-box select:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.booking-box button {
+    width: 100%;
+    max-width: 250px;
+    padding: 12px;
+    background: linear-gradient(to right, #FF4081, #3F51B5);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.booking-box button:hover {
+    background: linear-gradient(to right, #3F51B5, #FF4081);
+    transform: scale(1.05);
+}
+
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    z-index: 1000;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .booked {
+        padding: 20px;
+    }
+
+    .booking-box {
+        padding: 20px;
+    }
+
+    .booking-box h3 {
+        font-size: 2.4rem;
+    }
+
+    .booking-box input,
+    .booking-box select {
+        font-size: 0.9rem;
+    }
+
+    .booking-box button {
+        font-size: 1.1rem;
+    }
+
+    .popup {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .booking-box {
+        width: 75%;
+    }
+
+    .booking-box h3 {
+        font-size: 2.6rem;
+    }
+
+    .booking-box input,
+    .booking-box select {
+        font-size: 1.1rem;
+    }
+
+    .booking-box button {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .booking-box {
+        width: 50%;
+    }
+
+    .booking-box h3 {
+        font-size: 3rem;
+    }
+
+    .booking-box input,
+    .booking-box select {
+        font-size: 1.2rem;
+    }
+
+    .booking-box button {
+        font-size: 1.3rem;
+    }
+}

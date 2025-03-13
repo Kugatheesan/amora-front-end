@@ -1,42 +1,32 @@
-import React, { createContext,  useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode } from "react";
 import axios from "axios";
 import { BE_URL } from "../utils/Constant";
 
-
-interface Service{
-    id:number;
-    name:string;
-    categories: Category[];   
+interface Category {
+  id: number;
+  name: string;
+  description: string;
 }
 
-
-interface Category{ 
-    id:number;
-    name:string;
-    description:string;  
+interface Service {
+  id: number;
+  name: string;
+  categories: Category[];
 }
 
 export interface ServiceContextType {
   services: Service[];
-  serviceInfo: Service;
+  serviceInfo: Service | null;
   fetchServiceById: (serviceId: number) => Promise<Service | null>;
   fetchServices: () => Promise<void>;
   createService: (name: string, description: string, categories: string[]) => Promise<void>;
   deleteService: (id: number) => Promise<void>;
 }
 
-const defaultService: Service = {
-  id: 0,
-  name: "",
-  categories: [],
-};
-
 export const ServiceContext = createContext<ServiceContextType>({
   services: [],
-  serviceInfo: defaultService,
-  fetchServiceById: async () => {
-    throw new Error("fetchServiceById not implemented.");
-  },
+  serviceInfo: null,
+  fetchServiceById: async () => null,
   fetchServices: async () => {
     throw new Error("fetchServices not implemented.");
   },
@@ -48,49 +38,50 @@ export const ServiceContext = createContext<ServiceContextType>({
   },
 });
 
-export const ServiceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [services, setServices] = useState<Service[]>([]);
-  const [serviceInfo, setService] = useState<Service>();
+interface ServiceProviderProps {
+  children: ReactNode;
+}
 
-  
+export const ServiceProvider: React.FC<ServiceProviderProps> = ({ children }) => {
+  const [services, setServices] = useState<Service[]>([]);
+  const [serviceInfo, setServiceInfo] = useState<Service | null>(null);
+
   const fetchServices = async () => {
     try {
-      const response = await axios.get(`${BE_URL}/services`, { withCredentials: true });
+      const response = await axios.get<Service[]>(`${BE_URL}/services`, { withCredentials: true });
       setServices(response.data);
     } catch (error) {
       console.error("Error fetching services:", error);
     }
   };
 
-  
   const createService = async (name: string, description: string, categories: string[]) => {
     try {
-      const response = await axios.post(`${BE_URL}/services`, {
+      const response = await axios.post<{ service: Service }>(`${BE_URL}/services`, {
         name,
         description,
         categories,
       });
-      setServices((prev) => [...prev, response.data.service]);                                    
+      setServices((prev) => [...prev, response.data.service]);
     } catch (error) {
       console.error("Error creating service:", error);
     }
   };
 
-  
   const deleteService = async (id: number) => {
     try {
       await axios.delete(`${BE_URL}/services/${id}`);
-      setServices((prev) => prev.filter((service) => service.id !== id)); 
+      setServices((prev) => prev.filter((service) => service.id !== id));
     } catch (error) {
       console.error("Error deleting service:", error);
     }
   };
 
-  //service with category
-  const fetchServiceById = async (serviceId: number) => {
+  const fetchServiceById = async (serviceId: number): Promise<Service | null> => {
     try {
-      const response = await axios.get(`${BE_URL}/services/service/${serviceId}`, { withCredentials: true });
-      setService(response.data);
+      const response = await axios.get<Service>(`${BE_URL}/services/service/${serviceId}`, { withCredentials: true });
+      setServiceInfo(response.data);
+      return response.data;
     } catch (error) {
       console.error(`Error fetching service with ID ${serviceId}:`, error);
       return null;
@@ -98,19 +89,8 @@ export const ServiceProvider: React.FC<{ children: ReactNode }> = ({ children })
   };
 
   return (
-    <ServiceContext.Provider value={{ services, serviceInfo, fetchServices, createService, deleteService ,fetchServiceById }}>
+    <ServiceContext.Provider value={{ services, serviceInfo, fetchServices, createService, deleteService, fetchServiceById }}>
       {children}
     </ServiceContext.Provider>
   );
 };
-
-
-
-
-
-
-
-
-
-
-    

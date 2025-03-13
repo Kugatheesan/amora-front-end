@@ -33,6 +33,7 @@ export const Authprovider:React.FC<{children:ReactNode }> = ({children})=>{
     const [userId, setUserId] = useState<string | null>(Cookies.get("user_id") || null);
     const [isAuthenticated, setIsAuthenticated] = useState(!!token);
 
+    console.log(isAuthenticated)
     useEffect(() => {
       if (token) {
         Cookies.set("token", token, { expires: 1 });

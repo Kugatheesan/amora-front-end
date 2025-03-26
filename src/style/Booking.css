@@ -1,14 +1,24 @@
 /* General Page Styling */
 .booked {
     padding: 40px;
-    height: 100vh;
-    background-image: url("../assets/decorations-made-chrysanthemums-threads-stand-along-glance-path-dark-hall_1304-3398.jpg");
+    height: 110vh;
+    /* background-image: url("../assets/decorations-made-chrysanthemums-threads-stand-along-glance-path-dark-hall_1304-3398.jpg"); */
+    background: linear-gradient(135deg, 
+    #070607ce 10%, 
+    #2E0854 50%,  
+    #bbacc0 30%,   
+    #4B0082 70%,   
+    #b470db 50%,   
+    #4B0082 70%,  
+    #2E0854 90%,   
+    #4169E1 100%   
+);
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-blur: 8px;
+    /* background-blur: 8px; */
 }
 
 .booking-box {

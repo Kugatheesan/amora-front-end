@@ -1,28 +1,17 @@
 /* General Page Styling */
 .booked {
-    padding: 40px;
-    height: 110vh;
-    /* background-image: url("../assets/decorations-made-chrysanthemums-threads-stand-along-glance-path-dark-hall_1304-3398.jpg"); */
-    background: linear-gradient(135deg, 
-    #070607ce 10%, 
-    #2E0854 50%,  
-    #bbacc0 30%,   
-    #4B0082 70%,   
-    #b470db 50%,   
-    #4B0082 70%,  
-    #2E0854 90%,   
-    #4169E1 100%   
-);
+    padding: 40px 20px;
+    min-height: 100vh;
+    background-color: rgb(29, 29, 36);
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-blur: 8px; */
 }
 
 .booking-box {
-    background: rgba(255, 255, 255, 0.9); /* Slight transparency for elegance */
+    background: rgba(255, 255, 255, 0.9);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -36,15 +25,14 @@
     background: linear-gradient(to right, rgb(255, 87, 34), rgb(33, 150, 243));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-family: "Montserrat", sans-serif;
-    margin: 0 0 25px 0;
+    margin-bottom: 25px;
 }
 
 .booking-box input,
 .booking-box select {
     width: 100%;
-    max-width: 350px;
     padding: 12px;
     margin: 15px 0;
     border: 1px solid #ccc;
@@ -63,11 +51,10 @@
 
 .booking-box button {
     width: 100%;
-    max-width: 250px;
     padding: 12px;
     background: linear-gradient(to right, #FF4081, #3F51B5);
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     border-radius: 30px;
     border: none;
     cursor: pointer;
@@ -88,31 +75,66 @@
     color: white;
     padding: 15px;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     z-index: 1000;
 }
 
-/* Mobile View */
-@media (max-width: 767px) {
+/* ------------------ Responsive Media Queries ------------------ */
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
     .booked {
-        padding: 20px;
+        padding: 20px 10px;
+        flex-direction: column;
     }
 
     .booking-box {
-        padding: 20px;
+        padding: 25px 15px;
+        margin-top: 100px;
     }
 
     .booking-box h3 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     .booking-box input,
     .booking-box select {
         font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .booking-box button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .popup {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .booking-box {
+        padding: 35px 25px;
+        margin-top: 120px;
+        max-width: 500px;
+    }
+
+    .booking-box h3 {
+        font-size: 2.3rem;
+    }
+
+    .booking-box input,
+    .booking-box select {
+        font-size: 1rem;
+        padding: 11px;
     }
 
     .booking-box button {
         font-size: 1.1rem;
+        padding: 11px;
     }
 
     .popup {
@@ -120,14 +142,15 @@
     }
 }
 
-/* Tablet View */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
     .booking-box {
-        width: 75%;
+        padding: 40px;
+        margin-top: 150px;
     }
 
     .booking-box h3 {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
     }
 
     .booking-box input,
@@ -137,25 +160,5 @@
 
     .booking-box button {
         font-size: 1.2rem;
-    }
-}
-
-/* Desktop View */
-@media (min-width: 1024px) {
-    .booking-box {
-        width: 50%;
-    }
-
-    .booking-box h3 {
-        font-size: 3rem;
-    }
-
-    .booking-box input,
-    .booking-box select {
-        font-size: 1.2rem;
-    }
-
-    .booking-box button {
-        font-size: 1.3rem;
     }
 }

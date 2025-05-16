@@ -22,42 +22,6 @@ function Home() {
                     </a>
                 </div>
             </div>
-
-            {/* <div className="info-container">
-                <div className="info-container02">
-                <section className="info-block">
-                <div className="text-content">
-                    <h2>What is Event Planning?</h2>
-                    <p>
-                        Event planning involves organizing festivals, ceremonies, competitions, parties, and conventions, covering budgeting, venue selection, permits, logistics, decor, security, and more.
-                        The industry ranges from global events like the Olympics to small business meetings, helping organizations build relationships, raise funds, and celebrate.
-                        In Sri Lanka, many event planners exist, but only a few deliver premium results—choose a well-reputed company to make your dream event a success.
-                    </p>
-                </div>
-
-                
-                <div className="image-container">
-                    <img src={para1} alt="Event Planning" />
-                </div>
-            </section>
-
-            <section className="info-block reverse">
-                <div className="text-content">
-                    <h2>What is Time Management?</h2>
-                    <p>
-                        Time management is the process of planning and controlling how time is spent on tasks to enhance efficiency, productivity, and effectiveness.
-                        It involves using various skills, tools, and techniques to prioritize tasks, meet deadlines, and balance work and personal activities.
-                        Essential in project development, time management ensures timely completion and optimal resource utilization for better outcomes.
-                    </p>
-                </div>
-                <div className="image-container">
-                    <img src={para2} alt="Time Management" />
-                </div>
-            </section>
-                </div>
-          
-        </div> */}
-
 <div className="info-container">
     <div className="info-container02">
 

@@ -1,3 +1,4 @@
+
 .signin-container {
     min-height: 100vh;
     display: flex;
@@ -6,6 +7,8 @@
     position: relative;
     overflow: hidden;
     background-color: #242427;
+    padding-top: 80px; /* To make room for navbar */
+    box-sizing: border-box;
 }
 
 .background-shapes {
@@ -46,51 +49,50 @@
     background: white;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
-    min-height: 600px;
     display: flex;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    margin-top: 35px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
 
+.welcome-section, .signin-box {
+    flex: 1 1 500px;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .welcome-section {
-    flex: 1;
     background-image: url('../assets/6037288.jpg');
-    padding: 60px;
+    background-size: cover;
+    background-position: center;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-size: 600px 600px;
+    text-align: center;
 }
 
 .welcome-section h2 {
-    color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    text-align: center;
 }
 
 .welcome-section p {
-    color: white;
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
-    text-align: center;
 }
 
 .welcome-section .subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
     opacity: 0.8;
 }
 
 .signin-box {
-    flex: 1;
-    padding: 60px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -98,24 +100,26 @@
 }
 
 .signin-box h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #333;
+    text-align: center;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #e1e1e1;
     border-radius: 8px;
     font-size: 1rem;
     background: #f8f8f8;
+    box-sizing: border-box;
 }
 
 .show-password {
@@ -132,9 +136,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
-    margin-left: 80px;
-    padding-top: 20px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 .remember-me {
@@ -146,24 +149,24 @@
 
 .remember-forgot a {
     color: #0061ff;
-    margin-left: 90px;
+    font-size: 0.9rem;
 }
 
 .signin-btn {
-    width: 150px;
+    width: 100%;
     padding: 12px;
-    background:linear-gradient(135deg, #ff41d8, #2c1e1e8f);
+    background: linear-gradient(135deg, #ff41d8, #2c1e1e8f);
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
-    margin-left: 160px;
+    margin: 20px 0;
 }
 
 .signin-btn:hover {
-    background:rgb(6, 6, 109);
+    background: rgb(6, 6, 109);
 }
 
 .signin-divider {
@@ -177,7 +180,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    width: 45%;
+    width: 40%;
     height: 1px;
     background: #e1e1e1;
 }
@@ -261,12 +264,52 @@
         flex-direction: column;
     }
 
-    .welcome-section,
-    .signin-box {
-        padding: 30px;
+    .welcome-section, .signin-box {
+        padding: 20px;
     }
 
-    .welcome-section {
-        text-align: center;
+    .welcome-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-section p, .welcome-section .subtitle {
+        font-size: 1rem;
+    }
+
+    .signin-box h3 {
+        font-size: 1.4rem;
+    }
+
+    .signin-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .remember-forgot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signin-box, .welcome-section {
+        padding: 15px;
+    }
+
+    .signin-box h3, .welcome-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .signin-btn {
+        font-size: 0.9rem;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .remember-forgot a {
+        margin-left: 0;
     }
 }
